@@ -8,7 +8,7 @@
     <link rel='stylesheet' type='text/css' href='CSS/styles.css'>
     <script src='JS/scripts.js' defer></script>
 </head>
-<body>	
+<body onload="updateDisplay(0)">	
 	<div class="content-wrapper">
 		<header>
 			<h2>Very Cool Calculator</h2>
@@ -16,7 +16,7 @@
 		
 		<section class="calculator">
 			<div class="display-screen">
-				<h2 id="display">0</h2>
+				<h2 id="display"></h2>
 			</div>
 			<div class="button-area">
 				<button id="0" class="numbers btn">0</button>
@@ -30,9 +30,9 @@
 				<button id="8" class="numbers btn">8</button>
 				<button id="9" class="numbers btn">9</button>
 				<button id="0" class="numbers btn">0</button>
-				<button id="plus" class="operators btn">+</button>
+				<button id="add" class="operators btn">+</button>
 				<button id="subtract" class="operators btn">-</button>
-				<button id="multiply" class="operators btn">*</button>
+				<button id="multiply" class="operators btn">X</button>
 				<button id="divide" class="operators btn">/</button>
 				<button id="equals" class="operators btn">=</button>
 				<button id="clear" class="operators btn">AC</button>

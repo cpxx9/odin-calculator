@@ -17,13 +17,13 @@ function divide(a, b) {
 
 function operate(first, last, operator) {
     if(operator === 'add') {
-        return add(first, last);
+        return add(parseInt(first), parseInt(last));
     } else if(operator === 'subtract') {
-        return subtract(first, last);
+        return subtract(parseInt(first), parseInt(last));
     } else if(operator === 'multiply') {
-        return multiply(first, last);
+        return multiply(parseInt(first), parseInt(last));
     } else if(operator === 'divide') {
-        return divide(first, last);
+        return divide(parseInt(first), parseInt(last));
     } else {
         return 0;
     }
@@ -60,20 +60,85 @@ document.getElementById("8").onclick = function() {
 document.getElementById("9").onclick = function() {
     updateDisplay(9);    
 };
-document.getElementById("plus").onclick = function() {
-    
+document.getElementById("add").onclick = function() {
+    if(operator != undefined){
+        secondNumber = displayValue;
+        console.log(secondNumber);
+        total = operate(firstNumber, secondNumber, operator);
+        operator = "add";
+        firstNumber = total;
+        displayArr = [];
+        displayValue = 0;
+        document.getElementById("display").innerHTML = total;
+    } else {
+        operator = "add";
+        firstNumber = displayValue;
+        displayArr = [];
+        displayValue = 0;
+    }    
 };
 document.getElementById("subtract").onclick = function() {
-    
+    if(operator != undefined){
+        
+        secondNumber = displayValue;
+        console.log(secondNumber);
+        total = operate(firstNumber, secondNumber, operator);
+        operator = "subtract";
+        firstNumber = total;
+        displayArr = [];
+        displayValue = 0;
+        document.getElementById("display").innerHTML = total;
+    } else {
+        operator = "subtract";
+        firstNumber = displayValue;
+        displayArr = [];
+        displayValue = 0;
+    } 
 };
 document.getElementById("multiply").onclick = function() {
-    
+    if(operator != undefined){
+        
+        secondNumber = displayValue;
+        console.log(secondNumber);
+        total = operate(firstNumber, secondNumber, operator);
+        operator = "multiply";
+        firstNumber = total;
+        displayArr = [];
+        displayValue = 0;
+        document.getElementById("display").innerHTML = total;
+    } else {
+        operator = "multiply";
+        firstNumber = displayValue;
+        displayArr = [];
+        displayValue = 0;
+    } 
 };
 document.getElementById("divide").onclick = function() {
-    
+    if(operator != undefined){
+        
+        secondNumber = displayValue;
+        console.log(secondNumber);
+        total = operate(firstNumber, secondNumber, operator);
+        operator = "divide";
+        firstNumber = total;
+        displayArr = [];
+        displayValue = 0;
+        document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
+    } else {
+        operator = "divide";
+        firstNumber = displayValue;
+        displayArr = [];
+        displayValue = 0;
+    } 
 };
 document.getElementById("equals").onclick = function() {
-    
+    secondNumber = displayValue;
+    total = operate(firstNumber, secondNumber, operator);
+    document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
+    displayArr = [];
+    firstNumber = undefined;
+    secondNumber = undefined;
+    operator = undefined;
 };
 document.getElementById("clear").onclick = function() {
     displayArr = [];
@@ -95,10 +160,14 @@ function updateDisplay(int) {
     document.getElementById("display").innerHTML = displayValue;
 }
 
+function toFixedIfNeeded(value, dp) {
+    return +parseFloat(value).toFixed(dp);
+}
 //variable declarations
 let firstNumber;
 let secondNumber;
 let operator;
+let total;
 let displayArr = [];
 let displayValue;
 
