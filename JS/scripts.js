@@ -26,6 +26,12 @@ function operate(first, last, operator) {
     } 
 }
 
+function calcDisplay {
+    
+}
+
 let firstNumber;
 let secondNumber;
 let operator;
+let displayValue;
+
