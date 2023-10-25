@@ -31,44 +31,34 @@ function operate(first, last, operator) {
 
 //Button click events
 document.getElementById("0").onclick = function() {
-    updateDisplay(0);
-    console.log(displayArr);
+    updateDisplay(0);    
 };
 document.getElementById("1").onclick = function() {
-    updateDisplay(1);
-    console.log(displayArr);
+    updateDisplay(1);    
 };
 document.getElementById("2").onclick = function() {
-    updateDisplay(2);
-    console.log(displayArr);
+    updateDisplay(2);    
 };
 document.getElementById("3").onclick = function() {
-    updateDisplay(3);
-    console.log(displayArr);
+    updateDisplay(3);    
 };
 document.getElementById("4").onclick = function() {
-    updateDisplay(4);
-    console.log(displayArr);
+    updateDisplay(4);    
 };
 document.getElementById("5").onclick = function() {
-    updateDisplay(5);
-    console.log(displayArr);
+    updateDisplay(5);    
 };
 document.getElementById("6").onclick = function() {
-    updateDisplay(6);
-    console.log(displayArr);
+    updateDisplay(6);    
 };
 document.getElementById("7").onclick = function() {
-    updateDisplay(7);
-    console.log(displayArr);
+    updateDisplay(7);    
 };
 document.getElementById("8").onclick = function() {
-    updateDisplay(8);
-    console.log(displayArr);
+    updateDisplay(8);    
 };
 document.getElementById("9").onclick = function() {
-    updateDisplay(9);
-    console.log(displayArr);
+    updateDisplay(9);    
 };
 document.getElementById("plus").onclick = function() {
     
@@ -88,6 +78,9 @@ document.getElementById("equals").onclick = function() {
 document.getElementById("clear").onclick = function() {
     displayArr = [];
     displayValue = 0;
+    firstNumber = undefined;
+    secondNumber = undefined;
+    operator = undefined;
     document.getElementById("display").innerHTML = displayValue;
 };
 
