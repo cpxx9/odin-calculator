@@ -113,9 +113,12 @@ body{
 	display: flex;
 	flex-direction: column;
 	height: fit-content;
-	width: 360px;
+	width: 380px;
 	margin-left: 16px;
 	margin-top: 25px;
+    border:6px outset;
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
 }
 
 .display-screen{
