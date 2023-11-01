@@ -141,7 +141,7 @@ body{
 	padding-bottom: 9px;
 }
 
-#add, #plus, #subtract, #divide, #equals ,#backspace {
+#add, #plus, #subtract, #divide, #equals, #backspace, #decimal, #percent {
 	font-weight: bolder;
 }
 
