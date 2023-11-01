@@ -29,42 +29,69 @@ function operate(first, last, operator) {
 window.addEventListener("keydown", checkKeyPressed, false);
 
 function checkKeyPressed(evt) {
-    if(evt.keyCode == "48" || evt.keycode === "96") {
+    if(evt.keyCode == "96") {
         updateDisplay(0);
-    } else if(evt.keyCode == "49" || evt.keycode === "97") {
+    } 
+    if(evt.keyCode == "97") {
         updateDisplay(1);
-    } else if(evt.keyCode == "50" || evt.keycode === "98") {
+    } 
+    if(evt.keyCode == "98") {
         updateDisplay(2);
-    } else if(evt.keyCode == "51" || evt.keycode === "99") {
+    } 
+    if(evt.keyCode == "99") {
         updateDisplay(3);
-    } else if(evt.keyCode == "52" || evt.keycode === "100") {
+    } 
+    if(evt.keyCode == "100") {
         updateDisplay(4);
-    } else if(evt.keyCode == "53" || evt.keycode === "101") {
+    } 
+    if(evt.keyCode == "101") {
         updateDisplay(5);
-    } else if(evt.keyCode == "54" || evt.keycode === "102") {
+    } 
+    if(evt.keyCode == "102") {
         updateDisplay(6);
-    } else if(evt.keyCode == "55" || evt.keycode === "103") {
+    } 
+    if(evt.keyCode == "103") {
         updateDisplay(7);
-    } else if(evt.keyCode == "56" || evt.keycode === "104") {
+    } 
+    if(evt.keyCode == "104") {
         updateDisplay(8);
-    } else if(evt.keyCode == "57" || evt.keycode === "105") {
+    } 
+    if(evt.keyCode == "105") {
         updateDisplay(9);
-    } else if(evt.keyCode == "" || evt.keycode === "") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
+    }
+    if(evt.keyCode == "110") {
+        updateDisplay('.');
+    }
+    if(evt.keyCode == "107") {
+        operatorClick("add");
+    }
+    if(evt.keyCode == "109") {
+        operatorClick("subtract");
+    }
+    if(evt.keyCode == "106") {
+        operatorClick("multiply");
+    }
+    if(evt.keyCode == "111") {
+        operatorClick("divide");
+    }
+    if(evt.keyCode == "13") {
+        secondNumber = displayValue;
+        total = operate(firstNumber, secondNumber, operator);
+        document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
+    }
+    if(evt.keyCode == "27") {
+        displayArr = [];
+        displayValue = 0;
+        firstNumber = undefined;
+        secondNumber = undefined;
+        operator = undefined;
+        document.getElementById("display").innerHTML = displayValue;
+    }
+    if(evt.keyCode == "8") {
+        displayArr.pop();
+        console.log(displayArr);
+        displayValue = displayArr.join('');
+        document.getElementById("display").innerHTML = displayValue;
     }
 }
 
@@ -143,7 +170,6 @@ function updateDisplay(int) {
         displayArr.shift();
     } 
     displayValue = displayArr.join('');
-    console.log(displayValue);
     document.getElementById("display").innerHTML = displayValue;
 }
 function toFixedIfNeeded(value, dp) {
