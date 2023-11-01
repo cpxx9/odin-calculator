@@ -29,27 +29,27 @@ function operate(first, last, operator) {
 window.addEventListener("keydown", checkKeyPressed, false);
 
 function checkKeyPressed(evt) {
-    if(evt.keyCode == "13") {
-        updateDisplay();
-    } else if(evt.keyCode == "13") {
-
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
-        
-    } else if(evt.keyCode == "13") {
+    if(evt.keyCode == "48" || evt.keycode === "96") {
+        updateDisplay(0);
+    } else if(evt.keyCode == "49" || evt.keycode === "97") {
+        updateDisplay(1);
+    } else if(evt.keyCode == "50" || evt.keycode === "98") {
+        updateDisplay(2);
+    } else if(evt.keyCode == "51" || evt.keycode === "99") {
+        updateDisplay(3);
+    } else if(evt.keyCode == "52" || evt.keycode === "100") {
+        updateDisplay(4);
+    } else if(evt.keyCode == "53" || evt.keycode === "101") {
+        updateDisplay(5);
+    } else if(evt.keyCode == "54" || evt.keycode === "102") {
+        updateDisplay(6);
+    } else if(evt.keyCode == "55" || evt.keycode === "103") {
+        updateDisplay(7);
+    } else if(evt.keyCode == "56" || evt.keycode === "104") {
+        updateDisplay(8);
+    } else if(evt.keyCode == "57" || evt.keycode === "105") {
+        updateDisplay(9);
+    } else if(evt.keyCode == "" || evt.keycode === "") {
         
     } else if(evt.keyCode == "13") {
         
