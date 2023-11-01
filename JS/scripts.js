@@ -25,6 +25,49 @@ function operate(first, last, operator) {
     }
 }
 
+//KEYBOARD SUPPORT
+window.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(evt) {
+    if(evt.keyCode == "13") {
+        updateDisplay();
+    } else if(evt.keyCode == "13") {
+
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    } else if(evt.keyCode == "13") {
+        
+    }
+}
+
 //BUTTON CLICK EVENTS
 document.getElementById("0").onclick = function() {
     updateDisplay(0);    
