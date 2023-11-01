@@ -13,13 +13,13 @@ function divide(a, b) {
 }
 function operate(first, last, operator) {
     if(operator === 'add') {
-        return add(parseInt(first), parseInt(last));
+        return add(parseFloat(first), parseFloat(last));
     } else if(operator === 'subtract') {
-        return subtract(parseInt(first), parseInt(last));
+        return subtract(parseFloat(first), parseFloat(last));
     } else if(operator === 'multiply') {
-        return multiply(parseInt(first), parseInt(last));
+        return multiply(parseFloat(first), parseFloat(last));
     } else if(operator === 'divide') {
-        return divide(parseInt(first), parseInt(last));
+        return divide(parseFloat(first), parseFloat(last));
     } else {
         return 0;
     }
@@ -55,6 +55,9 @@ document.getElementById("8").onclick = function() {
 };
 document.getElementById("9").onclick = function() {
     updateDisplay(9);    
+};
+document.getElementById("decimal").onclick = function() {
+    updateDisplay('.');    
 };
 document.getElementById("add").onclick = function() {
     operatorClick("add");
@@ -97,7 +100,7 @@ function updateDisplay(int) {
         displayArr.shift();
     } 
     displayValue = displayArr.join('');
-       
+    console.log(displayValue);
     document.getElementById("display").innerHTML = displayValue;
 }
 function toFixedIfNeeded(value, dp) {
