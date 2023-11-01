@@ -111,6 +111,13 @@ document.getElementById("clear").onclick = function() {
     document.getElementById("display").innerHTML = displayValue;
 };
 
+document.getElementById("backspace").onclick = function() {
+    displayArr.pop();
+    console.log(displayArr);
+    displayValue = displayArr.join('');
+    document.getElementById("display").innerHTML = displayValue;
+};
+
 //VARIABLE DECLARATIONS
 let firstNumber;
 let secondNumber;
