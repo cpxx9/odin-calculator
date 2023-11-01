@@ -156,6 +156,12 @@ body{
 	background-color: #4E4C95;
 }
 
+.button-area #empty:hover {
+	color: #4E4C95;
+	background-color: #4E4C95;
+	cursor: default;
+}
+
 button {
     display: inline-block;
     border: none;
@@ -174,13 +180,11 @@ button {
     -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+button:hover {
     background: #0053ba;
 }
 
 button:focus {
-    outline: 1px solid #fff;
     outline-offset: -4px;
 }
 
