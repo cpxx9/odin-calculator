@@ -31,66 +31,77 @@ window.addEventListener("keydown", checkKeyPressed, false);
 function checkKeyPressed(evt) {
     if(evt.keyCode == "96") {
         updateDisplay(0);
-    } 
-    if(evt.keyCode == "97") {
+    } else if(evt.keyCode == "97") {
         updateDisplay(1);
-    } 
-    if(evt.keyCode == "98") {
+    } else if(evt.keyCode == "98") {
         updateDisplay(2);
-    } 
-    if(evt.keyCode == "99") {
+    } else if(evt.keyCode == "99") {
         updateDisplay(3);
-    } 
-    if(evt.keyCode == "100") {
+    } else if(evt.keyCode == "100") {
         updateDisplay(4);
-    } 
-    if(evt.keyCode == "101") {
+    } else if(evt.keyCode == "101") {
         updateDisplay(5);
-    } 
-    if(evt.keyCode == "102") {
+    } else if(evt.keyCode == "102") {
         updateDisplay(6);
-    } 
-    if(evt.keyCode == "103") {
+    } else if(evt.keyCode == "103") {
         updateDisplay(7);
-    } 
-    if(evt.keyCode == "104") {
+    } else if(evt.keyCode == "104") {
         updateDisplay(8);
-    } 
-    if(evt.keyCode == "105") {
+    } else if(evt.keyCode == "105") {
         updateDisplay(9);
-    }
-    if(evt.keyCode == "110") {
+    } else if(evt.keyCode == "110") {
         updateDisplay('.');
-    }
-    if(evt.keyCode == "107") {
+    } else if(evt.keyCode == "107") {
         operatorClick("add");
-    }
-    if(evt.keyCode == "109") {
+    } else if(evt.keyCode == "109") {
         operatorClick("subtract");
-    }
-    if(evt.keyCode == "106") {
+    } else if(evt.keyCode == "106") {
         operatorClick("multiply");
-    }
-    if(evt.keyCode == "111") {
+    } else if(evt.keyCode == "111") {
         operatorClick("divide");
-    }
-    if(evt.keyCode == "13") {
-        secondNumber = displayValue;
-        total = operate(firstNumber, secondNumber, operator);
-        document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
-    }
-    if(evt.keyCode == "27") {
+    } else if(evt.keyCode == "48") {
+        updateDisplay(0);
+    } else if(evt.keyCode == "49") {
+        updateDisplay(1);
+    } else if(evt.keyCode == "50") {
+        updateDisplay(2);
+    } else if(evt.keyCode == "51") {
+        updateDisplay(3);
+    } else if(evt.keyCode == "52") {
+        updateDisplay(4);
+    } else if(evt.keyCode == "53") {
+        updateDisplay(5);
+    } else if(evt.keyCode == "54") {
+        updateDisplay(6);
+    } else if(evt.keyCode == "55") {
+        updateDisplay(7);
+    } else if(evt.keyCode == "56") {
+        updateDisplay(8);
+    } else if(evt.keyCode == "57") {
+        updateDisplay(9);
+    } else if(evt.keyCode == "190") {
+        updateDisplay('.');
+    } else if(evt.keyCode == "187") {
+        operatorClick("add");
+    } else if(evt.keyCode == "189") {
+        operatorClick("subtract");
+    } else if(evt.keyCode == "191") {
+        operatorClick("divide");
+    } else if(evt.keyCode == "27") {
         displayArr = [];
         displayValue = 0;
         firstNumber = undefined;
         secondNumber = undefined;
         operator = undefined;
         document.getElementById("display").innerHTML = displayValue;
-    }
-    if(evt.keyCode == "8") {
+    } else if(evt.keyCode == "8") {
         displayArr.pop();
         displayValue = displayArr.join('');
         document.getElementById("display").innerHTML = displayValue;
+    } else if(evt.keyCode == "13") {
+        secondNumber = displayValue;
+        total = operate(firstNumber, secondNumber, operator);
+        document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
     }
 }
 
