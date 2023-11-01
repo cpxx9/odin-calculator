@@ -100,9 +100,7 @@ document.getElementById("equals").onclick = function() {
     total = operate(firstNumber, secondNumber, operator);
     document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
     displayArr = [];
-    firstNumber = undefined;
-    secondNumber = undefined;
-    operator = undefined;
+    firstNumber = displayValue;
 };
 document.getElementById("clear").onclick = function() {
     displayArr = [];
