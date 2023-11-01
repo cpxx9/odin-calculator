@@ -149,11 +149,25 @@ body{
 	border: 3px #3c8453 solid;
 }
 
-.btn {
+.button-area .clear {
+	border: 4px red solid;
+}
+
+.btn.numbers, .btn.operators {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 3px;
 	font-size: 18px;
+}
+
+.clear {
+	height: 80px;
+	width: 164px;
+	font-size: 18px;
+}
+
+#backspace.clear {
+	margin-bottom: 3px;
 }
 
 .button-area #empty {
@@ -185,18 +199,6 @@ button {
 
 button:hover {
     background: #0053ba;
-}
-
-button#percent:after {
-	content: '%';
-}
-
-button#percent:hover {
-	background-color: red;
-}
-
-button:hover#percent:after {
-	content: 'N/A';
 }
 
 button:focus {
