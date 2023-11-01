@@ -122,9 +122,9 @@ body{
 }
 
 .display-screen{
-	height: 64px;
+	height: 90px;
 	padding: 6px;
-	padding-top: 18px;
+	padding-top: 35px;
 	color: #ACACAC;
 	text-align: end;
 	font-family: 'digital-clock-font';
