@@ -25,33 +25,6 @@ function operate(first, last, operator) {
     }
 }
 
-//NORMAL FUNCTIONS
-function updateDisplay(int) {
-    displayArr.push(int);
-    if (displayArr[0] == 0 && displayArr.length != 1) {
-        displayArr.shift();
-    } 
-    displayValue = displayArr.join('');
-       
-    document.getElementById("display").innerHTML = displayValue;
-}
-function toFixedIfNeeded(value, dp) {
-    return +parseFloat(value).toFixed(dp);
-}
-function operatorClick(string) {
-    if(operator != undefined){
-        secondNumber = displayValue;
-        total = operate(firstNumber, secondNumber, operator);
-        firstNumber = total;
-        document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
-    } else {
-        firstNumber = displayValue;
-    }    
-    operator = string;
-    displayArr = [];
-    displayValue = 0;
-}
-
 //BUTTON CLICK EVENTS
 document.getElementById("0").onclick = function() {
     updateDisplay(0);    
@@ -99,8 +72,6 @@ document.getElementById("equals").onclick = function() {
     secondNumber = displayValue;
     total = operate(firstNumber, secondNumber, operator);
     document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
-    displayArr = [];
-    firstNumber = displayValue;
 };
 document.getElementById("clear").onclick = function() {
     displayArr = [];
@@ -117,6 +88,33 @@ document.getElementById("backspace").onclick = function() {
     displayValue = displayArr.join('');
     document.getElementById("display").innerHTML = displayValue;
 };
+
+//NORMAL FUNCTIONS
+function updateDisplay(int) {
+    displayArr.push(int);
+    if (displayArr[0] == 0 && displayArr.length != 1) {
+        displayArr.shift();
+    } 
+    displayValue = displayArr.join('');
+       
+    document.getElementById("display").innerHTML = displayValue;
+}
+function toFixedIfNeeded(value, dp) {
+    return +parseFloat(value).toFixed(dp);
+}
+function operatorClick(string) {
+    if(operator != undefined){
+        secondNumber = displayValue;
+        total = operate(firstNumber, secondNumber, operator);
+        firstNumber = total;
+        document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
+    } else {
+        firstNumber = displayValue;
+    }    
+    operator = string;
+    displayArr = [];
+    displayValue = 0;
+}
 
 //VARIABLE DECLARATIONS
 let firstNumber;
