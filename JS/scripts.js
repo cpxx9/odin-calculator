@@ -89,7 +89,6 @@ function checkKeyPressed(evt) {
     }
     if(evt.keyCode == "8") {
         displayArr.pop();
-        console.log(displayArr);
         displayValue = displayArr.join('');
         document.getElementById("display").innerHTML = displayValue;
     }
@@ -158,7 +157,6 @@ document.getElementById("clear").onclick = function() {
 
 document.getElementById("backspace").onclick = function() {
     displayArr.pop();
-    console.log(displayArr);
     displayValue = displayArr.join('');
     document.getElementById("display").innerHTML = displayValue;
 };
