@@ -151,6 +151,7 @@ body{
 
 .button-area .clear {
 	border: 4px red solid;
+	margin-bottom: 12px;
 }
 
 .btn.numbers, .btn.operators {
