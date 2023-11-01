@@ -11,9 +11,6 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 }
-function percent(a) {
-    return a /100;
-}
 function operate(first, last, operator) {
     if(operator === 'add') {
         return add(parseInt(first), parseInt(last));

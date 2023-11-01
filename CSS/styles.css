@@ -187,6 +187,18 @@ button:hover {
     background: #0053ba;
 }
 
+button#percent:after {
+	content: '%';
+}
+
+button#percent:hover {
+	background-color: red;
+}
+
+button:hover#percent:after {
+	content: 'N/A';
+}
+
 button:focus {
     outline-offset: -4px;
 }
