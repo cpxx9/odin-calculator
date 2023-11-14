@@ -122,15 +122,6 @@ body{
 }
 
 .display-screen{
-<<<<<<< HEAD
-	height: 64px;
-	padding: 6px;
-	padding-top: 18px;
-	color: #000;
-	text-align: end;
-	font-family: 'digital-clock-font';
-	border: 5px #555 solid;
-=======
 	height: 90px;
 	padding: 6px;
 	padding-top: 35px;
@@ -139,7 +130,6 @@ body{
 	font-family: 'digital-clock-font';
 	border: 5px #555 solid;
 	background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 }
 
 .button-area {
@@ -148,16 +138,10 @@ body{
 	border: 5px #555 solid;
 	border-top: 2.5px;
 	padding: 12px 8px;
-<<<<<<< HEAD
-}
-
-#add, #plus, #subtract, #divide, #equals ,#backspace {
-=======
 	padding-bottom: 9px;
 }
 
 #add, #plus, #subtract, #divide, #equals, #backspace, #decimal, #percent {
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 	font-weight: bolder;
 }
 
@@ -165,24 +149,18 @@ body{
 	border: 3px #3c8453 solid;
 }
 
-<<<<<<< HEAD
-.btn {
-=======
 .button-area .clear {
 	border: 4px red solid;
 	margin-bottom: 12px;
 }
 
 .btn.numbers, .btn.operators {
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 	height: 80px;
 	width: 80px;
 	margin-bottom: 3px;
 	font-size: 18px;
 }
 
-<<<<<<< HEAD
-=======
 .clear {
 	height: 80px;
 	width: 164px;
@@ -193,7 +171,6 @@ body{
 	margin-bottom: 3px;
 }
 
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 .button-area #empty {
 	color: #4E4C95;
 	background-color: #4E4C95;

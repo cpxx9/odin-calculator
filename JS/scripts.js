@@ -13,15 +13,6 @@ function divide(a, b) {
 }
 function operate(first, last, operator) {
     if(operator === 'add') {
-<<<<<<< HEAD
-        return add(parseInt(first), parseInt(last));
-    } else if(operator === 'subtract') {
-        return subtract(parseInt(first), parseInt(last));
-    } else if(operator === 'multiply') {
-        return multiply(parseInt(first), parseInt(last));
-    } else if(operator === 'divide') {
-        return divide(parseInt(first), parseInt(last));
-=======
         return add(parseFloat(first), parseFloat(last));
     } else if(operator === 'subtract') {
         return subtract(parseFloat(first), parseFloat(last));
@@ -29,39 +20,11 @@ function operate(first, last, operator) {
         return multiply(parseFloat(first), parseFloat(last));
     } else if(operator === 'divide') {
         return divide(parseFloat(first), parseFloat(last));
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
     } else {
         return 0;
     }
 }
 
-<<<<<<< HEAD
-//NORMAL FUNCTIONS
-function updateDisplay(int) {
-    displayArr.push(int);
-    if (displayArr[0] == 0 && displayArr.length != 1) {
-        displayArr.shift();
-    } 
-    displayValue = displayArr.join('');
-       
-    document.getElementById("display").innerHTML = displayValue;
-}
-function toFixedIfNeeded(value, dp) {
-    return +parseFloat(value).toFixed(dp);
-}
-function operatorClick(string) {
-    if(operator != undefined){
-        secondNumber = displayValue;
-        total = operate(firstNumber, secondNumber, operator);
-        firstNumber = total;
-        document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
-    } else {
-        firstNumber = displayValue;
-    }    
-    operator = string;
-    displayArr = [];
-    displayValue = 0;
-=======
 //KEYBOARD SUPPORT
 window.addEventListener("keydown", checkKeyPressed, false);
 
@@ -144,7 +107,6 @@ function checkKeyPressed(evt) {
         total = operate(firstNumber, secondNumber, operator);
         document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
     }
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 }
 
 //BUTTON CLICK EVENTS
@@ -178,14 +140,11 @@ document.getElementById("8").onclick = function() {
 document.getElementById("9").onclick = function() {
     updateDisplay(9);    
 };
-<<<<<<< HEAD
-=======
 document.getElementById("decimal").onclick = function() {
     if (!displayArr.includes('.')) {
         updateDisplay('.');
     }    
 };
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 document.getElementById("add").onclick = function() {
     operatorClick("add");
 };
@@ -198,19 +157,10 @@ document.getElementById("multiply").onclick = function() {
 document.getElementById("divide").onclick = function() {
     operatorClick("divide");
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 document.getElementById("equals").onclick = function() {
     secondNumber = displayValue;
     total = operate(firstNumber, secondNumber, operator);
     document.getElementById("display").innerHTML = toFixedIfNeeded(total, 2);
-<<<<<<< HEAD
-    displayArr = [];
-    firstNumber = displayValue;
-=======
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 };
 document.getElementById("clear").onclick = function() {
     displayArr = [];
@@ -223,16 +173,10 @@ document.getElementById("clear").onclick = function() {
 
 document.getElementById("backspace").onclick = function() {
     displayArr.pop();
-<<<<<<< HEAD
-    console.log(displayArr);
-=======
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
     displayValue = displayArr.join('');
     document.getElementById("display").innerHTML = displayValue;
 };
 
-<<<<<<< HEAD
-=======
 //NORMAL FUNCTIONS
 function updateDisplay(int) {
     displayArr.push(int);
@@ -259,7 +203,6 @@ function operatorClick(string) {
     displayValue = 0;
 }
 
->>>>>>> 390156315c9e7a511b87a758f7bd6b12e3bd99da
 //VARIABLE DECLARATIONS
 let firstNumber;
 let secondNumber;
