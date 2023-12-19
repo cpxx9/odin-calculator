@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let previousScreen = document.querySelector(".previous");
   let currentScreen = document.querySelector(".current");
+  let backspc = document.querySelector(".backspc");
 
   numbers.forEach((number) => number.addEventListener("click", function (e) {
     handleNumber(e.target.textContent);
@@ -48,6 +49,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   decimal.addEventListener("click", function() {
     addDecimal();
+    currentScreen.textContent = currentValue;
+  });
+
+  backspc.addEventListener("click", function() {
+    backspace();
     currentScreen.textContent = currentValue;
   });
 });
@@ -90,4 +96,8 @@ function addDecimal() {
   if(!currentValue.includes(".")) {
     currentValue += '.';
   }
+}
+
+function backspace() {
+  currentValue = currentValue.slice(0, -1);
 }
