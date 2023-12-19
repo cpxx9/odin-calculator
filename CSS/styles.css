@@ -167,12 +167,16 @@ body{
 	border: 3px #3c8453 solid;
 }
 
+.btn.equals {
+  border: 3px lightblue solid;
+}
+
 .button-area .clear, .backspc {
 	border: 4px red solid;
 	margin-bottom: 12px;
 }
 
-.btn.numbers, .btn.operators, .btn.decimal {
+.btn.numbers, .btn.operators, .btn.equals, .btn.decimal {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 3px;
