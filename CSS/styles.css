@@ -122,10 +122,16 @@ body{
     box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
 }
 
-.display-screen{
+#display {
+  height: 100px;
+  border-left: 5px #555 solid;
+  border-right: 5px #555 solid;
+  border-top: 5px #555 solid;
+}
+
+.screen{
 	height: 90px;
-	padding: 6px;
-	padding-top: 35px;
+  margin: 12px;
 	color: #ACACAC;
 	text-align: end;
 	font-family: 'digital-clock-font';
@@ -140,35 +146,36 @@ body{
 	border-top: 2.5px;
 	padding: 12px 8px;
 	padding-bottom: 9px;
+  padding-left: 13px;
 }
 
 #add, #plus, #subtract, #divide, #equals, #backspace, #decimal, #percent {
 	font-weight: bolder;
 }
 
-.button-area .operators {
+.button-area .operators, .equals {
 	border: 3px #3c8453 solid;
 }
 
-.button-area .clear {
+.button-area .clear, .backspc {
 	border: 4px red solid;
 	margin-bottom: 12px;
 }
 
-.btn.numbers, .btn.operators {
+.btn.numbers, .btn.operators, .btn.eqauls, .btn.equals {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 3px;
 	font-size: 18px;
 }
 
-.clear {
+.clear, .backspc {
 	height: 80px;
 	width: 164px;
 	font-size: 18px;
 }
 
-#backspace.clear {
+#backspace.backspc {
 	margin-bottom: 3px;
 }
 
