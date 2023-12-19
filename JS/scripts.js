@@ -45,6 +45,11 @@ document.addEventListener("DOMContentLoaded", function() {
       currentScreen.textContent = previousValue;
     }    
   });
+
+  decimal.addEventListener("click", function() {
+    addDecimal();
+    currentScreen.textContent = currentValue;
+  });
 });
 
 function handleNumber(num) {
@@ -61,9 +66,7 @@ function handleOperator(op) {
 
 function calculate() {
   previousValue = Number(previousValue);
-  console.log(previousValue);
   currentValue = Number(currentValue);
-  console.log(currentValue);
 
   if(operator === '+') {
     previousValue += currentValue;
@@ -81,4 +84,10 @@ function calculate() {
 
 function toFixedIfNeeded(value, dp) {
   return +parseFloat(value).toFixed(dp);
+}
+
+function addDecimal() {
+  if(!currentValue.includes(".")) {
+    currentValue += '.';
+  }
 }
