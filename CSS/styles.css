@@ -163,7 +163,7 @@ body{
 	font-weight: bolder;
 }
 
-.button-area .operators, .equals {
+.button-area .operators {
 	border: 3px #3c8453 solid;
 }
 
@@ -172,7 +172,7 @@ body{
 	margin-bottom: 12px;
 }
 
-.btn.numbers, .btn.operators, .btn.eqauls, .btn.equals, .btn.decimal {
+.btn.numbers, .btn.operators, .btn.decimal {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 3px;
