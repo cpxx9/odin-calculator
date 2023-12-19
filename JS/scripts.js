@@ -16,10 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
   let currentScreen = document.querySelector(".current");
 
   numbers.forEach((number) => number.addEventListener("click", function (e) {
-    handleNumber(e.target.textContent)
+    handleNumber(e.target.textContent);
+    currentScreen.textContent = currentValue;
   }));
 })
 
 function handleNumber(num) {
-  console.log(num);
+  if(currentValue.length <= 9) {
+    currentValue += num;
+  }
 }
