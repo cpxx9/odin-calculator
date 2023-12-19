@@ -4,7 +4,7 @@ let currentValue = '';
 
 document.addEventListener("DOMContentLoaded", function() {
   let clear = document.querySelector("#clear");
-  let equal = document.querySelector("#equals");
+  let equals = document.querySelector("#equals");
   let decimal = document.querySelector("#decimal");
 
   let numbers = document.querySelectorAll(".numbers");
@@ -37,6 +37,14 @@ document.addEventListener("DOMContentLoaded", function() {
     previousScreen.textContent = currentValue;
     currentScreen.textContent = currentValue;
   });
+
+  equals.addEventListener("click", function(){
+    if(currentValue != '' && previousValue != '') {
+      calculate();
+      previousScreen.textContent = '';
+      currentScreen.textContent = previousValue;
+    }    
+  });
 });
 
 function handleNumber(num) {
@@ -49,4 +57,28 @@ function handleOperator(op) {
   operator = op;
   previousValue = currentValue;
   currentValue = '';
+}
+
+function calculate() {
+  previousValue = Number(previousValue);
+  console.log(previousValue);
+  currentValue = Number(currentValue);
+  console.log(currentValue);
+
+  if(operator === '+') {
+    previousValue += currentValue;
+  } else if(operator === '-'){
+    previousValue -= currentValue;
+  } else if(operator === 'X'){
+    previousValue *= currentValue;
+  } else {
+    previousValue /= currentValue;
+  }
+
+  previousValue = toFixedIfNeeded(previousValue, 3).toString();
+  currentValue = toFixedIfNeeded(previousValue, 3).toString();
+}
+
+function toFixedIfNeeded(value, dp) {
+  return +parseFloat(value).toFixed(dp);
 }
