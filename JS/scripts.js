@@ -1,9 +1,7 @@
-//global variables
 let operator = '';
 let previousValue = '';
 let currentValue = '';
 
-//store DOM content into variables AFTER fully loaded
 document.addEventListener("DOMContentLoaded", function() {
   let clear = document.querySelector("#clear");
   let equal = document.querySelector("#equals");
