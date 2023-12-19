@@ -172,7 +172,7 @@ body{
 	margin-bottom: 12px;
 }
 
-.btn.numbers, .btn.operators, .btn.eqauls, .btn.equals {
+.btn.numbers, .btn.operators, .btn.eqauls, .btn.equals, .btn.decimal {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 3px;
