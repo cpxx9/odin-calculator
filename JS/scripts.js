@@ -1,8 +1,7 @@
 let operator = '';
 let previousValue = '';
 let currentValue = '';
-
-window.addEventListener('keydown', handleKeyPress());
+let currentScreen = '';
 
 document.addEventListener("DOMContentLoaded", function() {
   let clear = document.querySelector("#clear");
@@ -57,7 +56,52 @@ document.addEventListener("DOMContentLoaded", function() {
     backspace();
     currentScreen.textContent = currentValue;
   });
+  
+  window.addEventListener('keydown', handleKeyPress);
+
+  function handleKeyPress (e) {
+    e.preventDefault();
+    if (e.key >= 0 && e.key <= 9) {
+      handleNumber(e.key);
+      currentScreen.textContent = currentValue;
+    }
+    if (e.key === "Enter" || e.key === "=" && currentValue != "" && previousValue != "") {
+      calculate();
+      previousScreen.textContent = '';
+      currentScreen.textContent = previousValue;
+    }
+    if (e.key === "+" || e.key === "-" || e.key === "/") {
+      handleOperator(e.key);      
+      previousScreen.textContent = `${previousValue} ${operator}`;
+      currentScreen.textContent = currentValue;     
+    }
+    if (e.key === "*" || e.key === "x" || e.key === "X") {
+      handleOperator("X");
+      previousScreen.textContent = `${previousValue} ${operator.toLowerCase()}`;
+      currentScreen.textContent = currentValue;
+    
+    }
+  
+    if (e.key === ".") {
+      addDecimal();
+      currentScreen.textContent = currentValue;
+    }
+  
+    if (e.key === "Escape") {
+      previousValue = '';
+      currentValue = '';
+      operator = '';
+      previousScreen.textContent = currentValue;
+      currentScreen.textContent = currentValue;
+    }
+  
+    if (e.key === "Backspace" || e.key === "Delete") {
+      backspace();
+      currentScreen.textContent = currentValue;
+    }
+  }
 });
+
 
 function handleNumber(num) {
   if(currentValue.length <= 9) {
@@ -101,46 +145,4 @@ function addDecimal() {
 
 function backspace() {
   currentValue = currentValue.slice(0, -1);
-}
-
-function handleKeyPress (e) {
-  e.preventDefault();
-  if (e.key >= 0 && e.key <= 9) {
-    handleNumber(e.key.textContent);
-    currentScreen.textContent = currentValue;
-  }
-  if (e.key === "Enter" || e.key === "=" && currentValue != "" && previousValue != "") {
-    calculate();
-    previousScreen.textContent = '';
-    currentScreen.textContent = previousValue;
-  }
-  if (e.key === "+" || e.key === "-" || e.key === "/") {
-    handleOperator(e.target.textContent);      
-    previousScreen.textContent = `${previousValue} ${operator}`;
-    currentScreen.textContent = currentValue;     
-  }
-  if (e.key === "*" || e.key === "x" || e.key === "X") {
-    handleOperator("X");
-    previousScreen.textContent = `${previousValue} ${operator.toLowerCase()}`;
-    currentScreen.textContent = currentValue;
-  
-  }
-
-  if (e.key === ".") {
-    addDecimal();
-    currentScreen.textContent = currentValue;
-  }
-
-  if (e.key === "Escape") {
-    previousValue = '';
-    currentValue = '';
-    operator = '';
-    previousScreen.textContent = currentValue;
-    currentScreen.textContent = currentValue;
-  }
-
-  if (e.key === "Backspace" || e.key === "Delete") {
-    backspace();
-    currentScreen.textContent = currentValue;
-  }
 }
